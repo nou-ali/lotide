@@ -40,10 +40,11 @@ const assertArraysEqual = function (arr1, arr2) {
 };
 
 const words = ["ground", "control", "to", "major", "tom"]; 
-const results1 = map(words, word => word[0]);
-//const results1 = map(words, word => word[1]);
-//const results1 = map(words, word => word[2]);
 
-assertArraysEqual(map(words, word => word.length), [6,7,2,5,3])
-//assertArraysEqual(map(words, word => word.length), [6,2,2,3,3])
-//assertArraysEqual(map(words, word => word.length), [6,2,5,7,3])
+const results1 = map(words, word => word[0]);
+const results2 = map(words, word => word.length);
+const results3 = map(words, word => word.length * 2);
+
+assertArraysEqual(results1, [ 'g', 'c', 't', 'm', 't' ]);
+assertArraysEqual(results2, [6, 7, 2, 5, 3]);
+assertArraysEqual(results3, [12, 14, 4, 10, 6]);
