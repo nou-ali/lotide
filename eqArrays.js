@@ -1,10 +1,10 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅  Assertion passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑  Assertion failed: ${actual} !== ${expected}`);
-  }
-};
+// const assertEqual = function(actual, expected) {
+//   if (actual === expected) {
+//     console.log(`✅  Assertion passed: ${actual} === ${expected}`);
+//   } else {
+//     console.log(`🛑  Assertion failed: ${actual} !== ${expected}`);
+//   }
+// };
 
 
 // we need to loop through two arrays in order to see if they match
@@ -24,11 +24,14 @@ const eqArrays = function(arr1, arr2) {
     return result;
   }
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // => should NOT PASS
+  module.exports = eqArrays;
 
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => should PASS
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // => should NOT PASS
+
+// assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+// assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // => should NOT PASS
+
+// assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => should PASS
+// assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // => should NOT PASS
 
 
 
