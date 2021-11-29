@@ -1,31 +1,12 @@
 //assertEqual function
-
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅  Assertion passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑  Assertion failed: ${actual} !== ${expected}`);
-  }
-};
-
-
-// allItems: an array of strings that we need to look through
-// itemsToCount: an object specifying what to count
-
-
-//Before you get started to make your Lego car, you need to sift through adn make sure that all the pieces that you need to build your car are in the pile.
-
-
-
-// allItems: an array of strings that we need to look through
-// itemsToCount: an object specifying what to count
+const assertEqual = require('./assertEqual');
 const countOnly = function(allItems, itemsToCount) { //declaring function
   //The function should report back how many instances of each string were found in the allItems array of strings.
   const results = {};
   for (const item of allItems) {
     if (itemsToCount[item]) {
       if (results[item]) {
-        results[item] += 1
+        results[item] += 1   //starting if statement checks whether a given item is within the results list. If not, it initializes it at 1. If item-key is already in the results you dont need to add it again, you are just increasing the count for that item by 1.
       } else {
         results[item] = 1;
       }
@@ -49,12 +30,11 @@ const firstNames = [
 
 const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true});
 
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined); 
-assertEqual(result1["Fang"], 2);
+// assertEqual(result1["Jason"], 1);
+// assertEqual(result1["Karima"], undefined); 
+// assertEqual(result1["Fang"], 2);
 
 
-
-
+module.exports = countOnly;
 
 
