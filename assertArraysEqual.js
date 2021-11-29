@@ -1,4 +1,4 @@
-const eqArrays = require('../eqArrays');
+const eqArrays = require('./eqArrays');
 //copied eqArray function:
 // we need to loop through two arrays in order to see if they match
 // const eqArrays = function (arr1, arr2) {
