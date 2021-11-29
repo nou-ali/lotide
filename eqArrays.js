@@ -1,12 +1,4 @@
 const assertEqual = require('./assertEqual');
-// const assertEqual = function(actual, expected) {
-//   if (actual === expected) {
-//     console.log(`✅  Assertion passed: ${actual} === ${expected}`);
-//   } else {
-//     console.log(`🛑  Assertion failed: ${actual} !== ${expected}`);
-//   }
-// };
-
 
 // we need to loop through two arrays in order to see if they match
 const eqArrays = function(arr1, arr2) {
