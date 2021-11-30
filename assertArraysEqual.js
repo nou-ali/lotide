@@ -7,6 +7,7 @@ const assertArraysEqual = function (arr1, arr2) {
   }
 };
 
+//TEST CODE
 // assertArraysEqual(["My", "name", "is", "Noura"], ["My", "name", "is", "Noura"]);
 // assertArraysEqual(["Howdy", "hi", "bye"], ["hey", "hi", "bye"]);
 
